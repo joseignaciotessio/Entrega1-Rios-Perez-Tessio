@@ -5,7 +5,6 @@ class Healthdrink(models.Model):
     description = models.TextField(max_length=500)
     price = models.FloatField(null=True,blank=True)
     country = models.TextField(max_length=500)
-    stock = models.IntegerField()
     
 class Category(models.Model):
     categoria = models.CharField(max_length=50,null=True,blank=True)
