@@ -1,0 +1,22 @@
+{% extends 'category.html' %}
+
+{% block titulo %}
+    container
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+{% for i in container %}
+<a>{{i.tipo}} </a>
+<a>{{i.volumen}} </a>
+
+
+{% endfor %}
+
+{% endblock %}
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy

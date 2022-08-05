@@ -8,4 +8,11 @@ class Healthdrink(models.Model):
     stock = models.IntegerField()
     
 class Category(models.Model):
-    name = models.CharField(max_length=50)    
+    categoria = models.CharField(max_length=50,null=True,blank=True)
+    descripcion = models.TextField(max_length=150,null=True,blank=True)
+    activo = models.BooleanField(default=True)
+
+class Container(models.Model):
+    tipo = models.CharField(max_length=50,null=True,blank=True)
+    volumen = models.IntegerField(null=True,blank=True)
+    

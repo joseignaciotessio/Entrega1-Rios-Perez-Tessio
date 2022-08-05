@@ -1,5 +1,9 @@
 # Entrega1-Rios-Perez-Tessio
 
+Requerimientos
+Python 3.10
+Django 4.0.4
+
 Emprendimiento de Bebidas Saludables (en actividad en CHILE)
 1-El website permite conocer los productos actuales a la venta. 
 
