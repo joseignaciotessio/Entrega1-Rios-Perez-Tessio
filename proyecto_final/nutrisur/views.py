@@ -3,9 +3,9 @@ from nutrisur.models import Healthdrink
 from nutrisur.models import Category
 from nutrisur.models import Container
 
-def products(request):
+def Healthdrink(request):
     micontext = {'Healthdring ': Healthdrink}
-    return render (request,"products.html", context = micontext)
+    return render (request,"healthdrink.html", context = micontext)
 
 def Category(request):
     micontext = {'Category ': Category}
