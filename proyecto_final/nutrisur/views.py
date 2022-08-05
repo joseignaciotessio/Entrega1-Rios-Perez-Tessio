@@ -10,3 +10,7 @@ def Category(request):
     micontext = {'Category ': Category}
     return render (request,"category.html", context = micontext)
 
+def Container(request):
+    micontext = {'Container ': Container}
+    return render (request,"container.html", context = micontext)
+
