@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    container
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+{% for i in healthdrink %}
+        <a>{{i.name}} </a>
+        <a>{{i.description}} </a>
+        <a>{{i.price}} </a>
+        <a>{{i.country}} </a>
+
+
+{% endfor %}
+
+{% endblock %}
