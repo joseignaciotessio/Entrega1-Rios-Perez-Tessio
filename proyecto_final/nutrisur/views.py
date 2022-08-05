@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
+from nutrisur.models import Container
 
 def products(request):
     micontext = {'Healthdring ': Healthdrink}
