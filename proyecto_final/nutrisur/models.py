@@ -9,7 +9,7 @@ class Healthdrink(models.Model):
     
 class Category(models.Model):
     categoria = models.CharField(max_length=50,null=True,blank=True)
-    descripcion = models.TextField(max_length=150,null=True,blank=True)
+    description = models.TextField(max_length=150,null=True,blank=True)
     activo = models.BooleanField(default=True)
 
 class Container(models.Model):
