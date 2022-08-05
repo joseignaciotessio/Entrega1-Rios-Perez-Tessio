@@ -13,5 +13,5 @@ class Category(models.Model):
 
 class Container(models.Model):
     tipo = models.CharField(max_length=50,null=True,blank=True)
-    volumen = models.IntegerField(max_length = 10)
+    volumen = models.IntegerField()
     
