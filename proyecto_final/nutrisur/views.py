@@ -25,14 +25,14 @@ def formulario_prod(request):
         print(request.POST)
     return render(request, "formulario.html", context={})
 
-<<<<<<< HEAD
-=======
+
 def create_products(request):
     
     if request.method == 'POST':
         pass
-        
-        productos = Healthdrink.objects.all()
+    
+    
+        """productos = Healthdrink.objects.all()
         context = {}
     
         if len(productos) >= 2:
@@ -43,10 +43,11 @@ def create_products(request):
 
             context = {
             'nuevo_producto':nuevo_producto
-            }
+            }"""
+
     
     elif request.method == 'GET':
         form = Formulario_carga_productos
         context ={'form':form}
-        return render(request,'nutrisur/carga_productos.html',context=context)
->>>>>>> jorge_sabado_AM
+        return render(request,'carga_productos.html',context=context)
+
