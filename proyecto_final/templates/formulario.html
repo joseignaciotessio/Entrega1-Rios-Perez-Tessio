@@ -7,12 +7,15 @@
 {% block contenido_que_cambia %}
 
 <form action="POST">
+{% csrf_token %}
 
-<p><input type = "text" name = "producto"><p>
+<p><input type = "text" name = "producto" placeholder="nombre producto"><p>
 
-<p><input type = "text" name = "descripcion"><p>
+<p><input type = "text" name = "descripcion" placeholder="descripcion"><p>
+    
+<p><input type = "text" name = "precio" placeholder="precio"><p>
 
-<p><input type = "submit" value="Enviar"><p>
+    <p><input type = "submit" value="Enviar"><p>
 
 </form>
 
