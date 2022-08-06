@@ -18,3 +18,5 @@ def envases(request):
     micontext = {'Container': conulta_r}
     return render (request,"container.html", context = micontext)
 
+def formulario_prod(request):
+    return render(request, "formulario.html", context={})

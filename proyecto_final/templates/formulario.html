@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Formulario
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="POST">
+
+<p><input type = "text" name = "producto"><p>
+
+<p><input type = "text" name = "descripcion"><p>
+
+<p><input type = "submit" value="Enviar"><p>
+
+</form>
+
+{% endblock %}
