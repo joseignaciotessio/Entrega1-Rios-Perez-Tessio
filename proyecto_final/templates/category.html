@@ -7,8 +7,9 @@
 {% block contenido_que_cambia %}
 
 {% for i in Category %}
-<a>{{i.name}} </a>
-
+<a>{{i.categoria}} </a>
+<a>{{i.description}} </a>
+<a>{{i.activo}} </a>
 {% endfor %}
 
 {% endblock %}
