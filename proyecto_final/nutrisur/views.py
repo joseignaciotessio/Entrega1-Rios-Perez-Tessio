@@ -2,6 +2,7 @@ from django.shortcuts import render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
 from nutrisur.models import Container
+from nutrisur.forms import formulario_productos
 
 def productos(request):
     conulta_h = Healthdrink.objects.all()
@@ -19,4 +20,7 @@ def envases(request):
     return render (request,"container.html", context = micontext)
 
 def formulario_prod(request):
+    print(request.method)
+    if request.method =="POST":
+        print(request.POST)
     return render(request, "formulario.html", context={})
