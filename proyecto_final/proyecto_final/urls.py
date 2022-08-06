@@ -1,8 +1,6 @@
 from django.contrib import admin
 from django.urls import path,include    
-from nutrisur.models import Healthdrink
-from nutrisur.models import Category
-from nutrisur.models import Container
+from nutrisur.views import Healthdrink, Category, Container
 
 urlpatterns = [
     path('admin/', admin.site.urls),
