@@ -2,7 +2,6 @@ from django.shortcuts import render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
 from nutrisur.models import Container
-from nutrisur.forms import formulario_productos
 
 def productos(request):
     conulta_h = Healthdrink.objects.all()
