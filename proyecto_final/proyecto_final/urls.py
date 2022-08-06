@@ -1,11 +1,11 @@
 from django.contrib import admin
 from django.urls import path,include   
  
-from nutrisur.views import Healthdrink, Category, Container
+from nutrisur.views import productos, categorias, envases
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Healthdrink/', Healthdrink, name ='Healthdrink'),
-    path('Category/', Category, name = 'Category'),
-    path('Container/', Container, name = 'Container')
+    path('Healthdrink/', productos, name ='Healthdrink'),
+    path('Category/', categorias, name = 'Category'),
+    path('Container/', envases, name = 'Container')
 ]
