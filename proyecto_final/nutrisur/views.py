@@ -27,6 +27,7 @@ def formulario_prod(request):
 
 
 def create_products(request):
+    print(request.POST)
     
     if request.method == 'POST':
         pass
