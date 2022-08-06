@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    carga de productos
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="" method="POST">
+{% csrf_token %}
+
+<table>
+
+    {{FormularioCarga.as_table}}
+
+</table>
+{% endblock %}

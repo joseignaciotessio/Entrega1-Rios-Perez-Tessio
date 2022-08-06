@@ -2,7 +2,7 @@ from django.shortcuts import render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
 from nutrisur.models import Container
-from nutrisur.forms import FormuarioCarga
+from nutrisur.forms import FormularioCarga
 
 def productos(request):
     conulta_h = Healthdrink.objects.all()
@@ -25,28 +25,32 @@ def formulario_prod(request):
         print(request.POST)
     return render(request, "formulario.html", context={})
 
-def create_products(request):
+"""def create_products(request):
+    global productos
 
     if request.method == 'POST':
-        """
+        
         productos = Healthdrink.objects.all()
     context = {}
 
-    if len(productos) >3:
+    if len(productos) >0:
         nuevo_producto = Healthdrink.objects.create(name = 'granola', description = 'barrita con granola',
         price = 580, country = 'Bolivia')
 
         context = {
             nuevo_producto:nuevo_producto
         }
-    """
+    
 
     elif request.method == 'GET':
-        form = FormuarioCarga()
+        form = FormularioCarga()
      
         context = {'form':form}
-        return render(request, 'nutrisur/healthdrink.html', context=context)
+        return render(request, 'carga_productos.html', context=context)
+"""
 
-
-
+def create_products(request):
+    conulta_h = Healthdrink.objects.all()
+    micontext = {'Healthdrink': conulta_h}
+    return render (request,"healthdrink.html", context = micontext)
     
