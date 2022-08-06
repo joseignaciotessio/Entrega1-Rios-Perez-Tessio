@@ -1,10 +1,10 @@
-
 from django import forms
 
-class FormularioCarga(forms.Form):
+class Formulario_carga_productos(forms.Form):
 
-    nombre = forms.CharField()
-    descripcion = forms.CharField()
-    precio = forms.IntegerField()
+    name = forms.CharField(max_length=40)
+    description = forms.CharField(max_length=500)
+    price  = forms.IntegerField()
+    country = forms.CharField(max_length=40)
 
 
