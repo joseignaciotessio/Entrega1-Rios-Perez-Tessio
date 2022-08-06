@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path    
+from django.urls import path,include    
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
 from nutrisur.models import Container
