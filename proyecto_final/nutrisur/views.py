@@ -1,3 +1,4 @@
+from cgi import print_exception
 from django.shortcuts import render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
@@ -30,23 +31,16 @@ def create_products(request):
     print(request.POST)
     
     if request.method == 'POST':
-        pass
-    
-    
-        """productos = Healthdrink.objects.all()
-        context = {}
-    
-        if len(productos) >= 2:
-            nuevo_producto = Healthdrink.objects.create(name = 'granola',
-            description = 'barrita con granola',
-            price = 580, 
-            country = 'Bolivia')
-
-            context = {
-            'nuevo_producto':nuevo_producto
-            }"""
-
-    
+        form = Formulario_carga_productos(request.POST)
+        
+        if form.is_valid():
+            Healthdrink.objects.create(
+                name = form.cleaned_data ['name'],
+                description = form.cleaned_data ['description'],
+                price = form.cleaned_data ['price'],
+                country = form.cleaned_data ['country']
+            )
+            
     elif request.method == 'GET':
         form = Formulario_carga_productos
         context ={'form':form}
