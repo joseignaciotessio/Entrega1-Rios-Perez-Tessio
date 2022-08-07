@@ -8,19 +8,19 @@ from nutrisur.forms import Formulario_carga_presentaciones
 
 
 def productos(request):
-    conulta_h = Healthdrink.objects.all()
-    micontext = {'Healthdrink': conulta_h}
-    return render (request,"healthdrink.html", context = micontext)
+    consulta= Healthdrink.objects.all()
+    context = {'Healthdrink': consulta}
+    return render (request,"healthdrink.html", context = context)
 
 def categorias(request):
-    conulta_c = Category.objects.all()
-    micontext = {'Category': conulta_c}
-    return render (request,"category.html", context = micontext)
+    consulta= Category.objects.all()
+    context = {'Category': consulta}
+    return render (request,"category.html", context = context)
 
 def envases(request):
-    conulta_r = Container.objects.all()
-    micontext = {'Container': conulta_r}
-    return render (request,"container.html", context = micontext)
+    consulta = Container.objects.all()
+    context = {'Container': consulta}
+    return render (request,"container.html", context = context)
 
 def create_products(request):
     print(request.POST)
