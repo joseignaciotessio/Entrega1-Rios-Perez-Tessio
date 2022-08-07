@@ -7,6 +7,7 @@ from nutrisur.models import Category
 from nutrisur.models import Container
 from nutrisur.forms import Formulario_carga_productos
 
+
 def productos(request):
     conulta_h = Healthdrink.objects.all()
     micontext = {'Healthdrink': conulta_h}
@@ -50,8 +51,8 @@ def create_products(request):
         context ={'form':form}
         return render(request,'carga_productos.html',context=context)
 
-def search_products(request):
+def search_productos(request):
     search = request.GET ["search"]
     productos = Healthdrink.objects.filter(name_icontains=search)
     context = {"productos" : productos}
-    return render(request, "nutrisur/search_productos.html", context = context)
+    return render(request, "search_productos.html", context = context)
