@@ -10,5 +10,5 @@ urlpatterns = [
     path('Container/', envases, name = 'Container'),
     path("formulario/", formulario_prod, name = "formulario"),
     path('Formulario_carga_productos/',create_products, name = 'Formulario_carga_productos'),
-    path("search-productos/", search_productos, name = "search_productos")
+    path("search_productos/", search_productos, name = "search_productos")
 ]
