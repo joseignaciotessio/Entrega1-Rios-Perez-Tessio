@@ -40,7 +40,7 @@ def create_products(request):
                 name = form.cleaned_data ['name'],
                 description = form.cleaned_data ['description'],
                 price = form.cleaned_data ['price'],
-                country = form.cleaned_data C'country']
+                country = form.cleaned_data ['country']
             )
             
             return redirect(productos)
@@ -52,5 +52,6 @@ def create_products(request):
 
 def search_products(request):
     search = request.GET ["search"]
-    productos = Healthdrink.objets.filter(name=search)
-    return HTTPResponse(request.GET)
+    productos = Healthdrink.objects.filter(name_icontains=search)
+    context = {"productos" : productos}
+    return render(request, "nutrisur/search_productos.html", context = context)
