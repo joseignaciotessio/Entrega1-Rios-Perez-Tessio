@@ -1,4 +1,5 @@
 from cgi import print_exception
+from contextlib import redirect_stderr
 from django.shortcuts import render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
@@ -42,7 +43,6 @@ def create_products(request):
             )
             
             return redirect(Healthdrink)
-        
         
     elif request.method == 'GET':
         form = Formulario_carga_productos
