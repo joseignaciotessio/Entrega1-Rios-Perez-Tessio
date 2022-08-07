@@ -87,6 +87,6 @@ def create_presentaciones(request):
 
 def search_productos(request):
     search = request.GET ["search"]
-    productos = Healthdrink.objects.filter(name_icontains = search)
-    context = {"productos" : productos}
+    consulta_h = Healthdrink.objects.filter(name_icontains = search)
+    context = {"Healthdrink" : consulta_h}
     return render(request, "search_productos.html", context = context)
