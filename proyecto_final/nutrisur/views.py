@@ -22,13 +22,6 @@ def envases(request):
     micontext = {'Container': conulta_r}
     return render (request,"container.html", context = micontext)
 
-def formulario_prod(request):
-    print(request.method)
-    if request.method =="POST":
-        print(request.POST)
-    return render(request, "formulario.html", context={})
-
-
 def create_products(request):
     print(request.POST)
     
