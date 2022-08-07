@@ -41,6 +41,9 @@ def create_products(request):
                 country = form.cleaned_data ['country']
             )
             
+            return redirect(Healthdrink)
+        
+        
     elif request.method == 'GET':
         form = Formulario_carga_productos
         context ={'form':form}
