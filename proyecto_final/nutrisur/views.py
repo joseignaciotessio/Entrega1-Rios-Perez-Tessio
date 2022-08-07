@@ -1,5 +1,6 @@
 from cgi import print_exception
 from contextlib import redirect_stderr
+from http.client import HTTPResponse
 from django.shortcuts import render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
@@ -39,13 +40,17 @@ def create_products(request):
                 name = form.cleaned_data ['name'],
                 description = form.cleaned_data ['description'],
                 price = form.cleaned_data ['price'],
-                country = form.cleaned_data ['country']
+                country = form.cleaned_data C'country']
             )
             
-            return redirect(Healthdrink)
+            return redirect(productos)
         
     elif request.method == 'GET':
         form = Formulario_carga_productos
         context ={'form':form}
         return render(request,'carga_productos.html',context=context)
 
+def search_products(request):
+    search = request.GET ["search"]
+    productos = Healthdrink.objets.filter(name=search)
+    return HTTPResponse(request.GET)
