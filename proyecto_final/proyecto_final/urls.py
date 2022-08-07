@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path   
-from nutrisur.views import create_products, productos, categorias, envases, formulario_prod, search_productos
+from nutrisur.views import create_products, productos, categorias, envases, formulario_prod, search_productos, create_categorias, create_presentaciones
 
 
 urlpatterns = [
@@ -10,5 +10,7 @@ urlpatterns = [
     path('Container/', envases, name = 'Container'),
     path("formulario/", formulario_prod, name = "formulario"),
     path('Formulario_carga_productos/',create_products, name = 'Formulario_carga_productos'),
+    path('Formulario_carga_categorias/',create_categorias, name = 'Formulario_carga_categorias'),
+    path('Formulario_carga_presentaciones/',create_presentaciones, name = 'Formulario_carga_presentaciones'),
     path("search_productos/", search_productos, name = "search_productos")
 ]
