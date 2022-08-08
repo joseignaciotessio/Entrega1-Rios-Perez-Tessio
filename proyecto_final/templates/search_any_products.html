@@ -7,11 +7,13 @@
 {% block contenido_que_cambia %}
 
 {% for consulta in consulta %}
-    <p><a style ="color:blue">{{consulta.name}} </a><p>
-        <p><a style ="color:green">{{consulta.price}} </a><p>
-            <p><a>{{consulta.country}} </a><p>
-
-
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-light">
+      <li class="list-group-item px-3">Nombre: {{consulta.name}}</li>
+      <li class="list-group-item px-3">Precio: {{consulta.price}} </li>
+      <li class="list-group-item px-3">País de origen: {{consulta.country}} </li>
+    </ul>
+  </div>
 {% endfor %}
 
 {% endblock %}

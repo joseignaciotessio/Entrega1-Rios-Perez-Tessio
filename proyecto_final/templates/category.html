@@ -7,9 +7,12 @@
 {% block contenido_que_cambia %}
 
 {% for i in Category %}
-<p><a style ="color:red">{{i.categoria}} </a><p>
-    <p><a style ="color:blue">{{i.description}} </a><p>
-        <p><a>{{i.activo}} </a><p>
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-light">
+      <li class="list-group-item px-3">Producto: {{i.categoria}}</li>
+      <li class="list-group-item px-3">Descripción: {{i.description}} </li>
+    </ul>
+  </div>
 {% endfor %}
 
 {% endblock %}

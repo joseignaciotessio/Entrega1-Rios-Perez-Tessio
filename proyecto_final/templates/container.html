@@ -7,9 +7,13 @@
 {% block contenido_que_cambia %}
 
 {% for i in Container %}
-<p><a style="color:red">{{i.tipo}} </a><p>
-    <p><a style="color:blue">{{i.volumen}} </a><p>
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-light">
+      <li class="list-group-item px-3">Tipo de envase: {{i.tipo}}</li>
+      <li class="list-group-item px-3">Contenido: {{i.volumen}} </li>
+    </ul>
+  </div>
 
-{% endfor %}
+  {% endfor %}
 
 {% endblock %}
