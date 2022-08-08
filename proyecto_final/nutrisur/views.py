@@ -78,8 +78,12 @@ def create_presentaciones(request):
         context ={'form':form}
         return render(request,'carga_presentaciones.html',context=context)
 
-def search_productos(request):
-    search = request.GET ["search"]
-    consulta_h = Healthdrink.objects.filter(name_icontains = search)
-    micontext = {"Healthdrink": consulta_h}
-    return render(request, "search_productos.html", context = micontext)
+def search_any_products(request):
+    print(request.GET)
+
+    
+    
+    """search = request.GET ["search"]
+    consulta = Healthdrink.objects.filter(name_icontains = search)
+    context = {"Healthdrink": consulta}
+    return render(request, "search_productos.html", context = context)"""
