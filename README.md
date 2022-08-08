@@ -16,3 +16,4 @@ Emprendimiento de Bebidas Saludables (en actividad en CHILE)
 
 4- Desde el buscador se puede buscar productos ingresando algun valor de referencia
 
+consignas de entrega todas ok.
