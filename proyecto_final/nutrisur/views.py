@@ -87,7 +87,7 @@ def create_presentaciones(request):
 def redirect_search(request):
     search = request.GET['search']
     consulta = Healthdrink.objects.filter(name__icontains=search)
-    context = {'Healthdrink': consulta}
-    return render(request, "search_any_products.html", context=context)
+    context = {'consulta': consulta}
+    return render(request, 'search_any_products.html', context=context)
   
 

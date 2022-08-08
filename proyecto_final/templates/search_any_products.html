@@ -6,10 +6,10 @@
 
 {% block contenido_que_cambia %}
 
-{% for i in consulta %}
-    <p><a style ="color:blue">{{i.description}} </a><p>
-        <p><a style ="color:green">{{i.price}} </a><p>
-            <p><a>{{i.country}} </a><p>
+{% for consulta in consulta %}
+    <p><a style ="color:blue">{{consulta.name}} </a><p>
+        <p><a style ="color:green">{{consulta.price}} </a><p>
+            <p><a>{{consulta.country}} </a><p>
 
 
 {% endfor %}
