@@ -2,9 +2,17 @@
 <a name="top"></a>
 # Entrega1-Rios-Perez-Tessio
 
-## INTRODUCCIÓN:
+Autores 
 
-Como parte del curso 
+ <a href="https://github.com/joseignaciotessio/" title=" @joseignaciotessio">Ir </a>
+ 
+  <a href="https://www.campusmvp.es/recursos/" title="direccion_1">@joseignaciotessio</a>
+-
+- @jorgeriosf
+
+
+
+
  
 ## Índice de contenidos
 * [Objetivos](#item1)
