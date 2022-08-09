@@ -56,44 +56,78 @@ anteriormente señaladas.
 
   - git
   - Python 3.x instalado
+  
+    - Instalación oficial de Python  <a href="https://www.python.org/downloads/" title="Instalación">Instalación python</a>
   - última versión Django
+
+- 🆘 En caso de no tener instalado git:
+  - En windows:
+    -  Instrucciones : <a href="https://git-scm.com/download/win/" title="Instalación">Instalación en windows</a>
+
+  - En Mac:
+    -  Instrucciones: <a href="https://git-scm.com/download/mac/" title="Instalación">Instalación en mac</a>
  
+  - En Linux:
+    -  Abrir un terminal y ejecutar:
+    
+```
+# Debian, Ubuntu, Mint y derivadas:
+
+sudo apt-get update
+sudo apt-get install git
+```
+```
+# Archlinux y derivadas:
+
+sudo pacman -S git
+```
+
+Para verificar instalación ejecutar:
+```
+git --version
+```
  
 [Subir](#top)
  
 <a name="item3"></a>
 ## Comenzando 🚀
 
-- Clonar este repositorio directamente desde Vscode. (ctrl + shift + p ) https://github.com/joseignaciotessio/Entrega1-Rios-Tessio.
+- Clonar este repositorio directamente desde el IDE, Vscode por ejemplo. (ctrl + shift + p ) https://github.com/joseignaciotessio/Entrega1-Rios-Tessio.
+
 - Directamente desde el terminal:
 
 ```
 git clone https://github.com/joseignaciotessio/Entrega1-Rios-Tessio
 ```
 
-- Ejecutar el proyecto en un IDE ya sea en un entorno virual o local
+- Ejecutar el proyecto en el IDE ya sea en un entorno virtual o local
 
 - Verificar que esté django instalado:
   
 
 ```
-pip list
+(myenv) [jrf@jrf-bspwm myenv]$ pip list
+Package    Version
+---------- -------
+asgiref    3.5.2
+Django     4.1  < ================
+pip        22.1.2
+setuptools 63.1.0
+sqlparse   0.4.2
+wheel      0.37.1
 ```
-- Para lanzar el servidor
 
-```
-python3 manage.py runserver
-
-```
 
 ⚠️ 🆘 En caso que django no esté instalado ejecutar el siguiente
 código para su instalación:
 
 ```
 pip install django
-
 ```
-
+- Para lanzar el servidor (desde el terminal)
+```
+python3 manage.py runserver
+```
  
  
 [Subir](#top)
@@ -110,6 +144,9 @@ Una vez ejecutado los pasos anteriores ejecutar las pruebas de código
 ## Documentación oficial 📌
 
 <a href="https://docs.djangoproject.com/en/4.1/#django-documentation/" title="Django documentation">Django.documentation</a>
+
+
+<a href="https://www.python.org/" title="Python documentation">Python.documentation</a>
  
 [Subir](#top)
 
