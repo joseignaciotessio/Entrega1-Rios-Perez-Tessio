@@ -21,11 +21,12 @@
 * [Pre-requisitos](#item2)
 * [Comenzando](#item3)
 * [Ejecución y revisión del código](#item4)
+* [Documentación](#item5)
  
 <a name="item1"></a>
 ## Objetivos :dart:
  
-Desarrollar una WEB Django con patrón MVT como parte de la *"LA ENTREGA INTERMEDIA DEL PROYECTO FINAL"*.         
+Desarrollar una WEB Django con patrón MVT como parte de la *"ENTREGA INTERMEDIA DEL PROYECTO FINAL"*.         
 
 
 Nuestro proyecto contempla el despliegue de una página web de un emprendimiento de Bebidas Saludables Nutrisur :registered: (con actividad en Chile)
@@ -63,7 +64,13 @@ anteriormente señaladas.
 <a name="item3"></a>
 ## Comenzando 🚀
 
-- Clonar este repositorio https://github.com/joseignaciotessio/Entrega1-Rios-Tessio
+- Clonar este repositorio directamente desde Vscode. (ctrl + shift + p ) https://github.com/joseignaciotessio/Entrega1-Rios-Tessio.
+- Directamente desde el terminal:
+
+```
+git clone https://github.com/joseignaciotessio/Entrega1-Rios-Tessio
+```
+
 - Ejecutar el proyecto en un IDE ya sea en un entorno virual o local
 
 - Verificar que esté django instalado:
@@ -99,6 +106,12 @@ Una vez ejecutado los pasos anteriores ejecutar las pruebas de código
  
 [Subir](#top)
 
+<a name="item5"></a>
+## Documentación oficial 📌
+
+<a href="https://docs.djangoproject.com/en/4.1/#django-documentation/" title="Django documentation">Django.documentation</a>
+ 
+[Subir](#top)
 
 
 
