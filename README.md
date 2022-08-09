@@ -1,26 +1,26 @@
 
 <a name="top"></a>
-# Entrega1-Rios-Perez-Tessio
+# Entrega1-Tessio-Ríos   
 
-Autores 
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.xePC9eCXE-p7xCpCMUAaFgHaHa%26pid%3DApi&f=1" height="60" width="60" >  :heavy_plus_sign:   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.AnEcLPA3x4bruESvEyj4CQHaHa%26pid%3DApi&f=1" height="60" width="60" >
 
- <a href="https://github.com/joseignaciotessio/" title=" @joseignaciotessio">Ir </a>
+
+
+## Autores :pencil2:
+
+<a href="https://github.com/joseignaciotessio/" title="Jose Ignacio Tessio">@joseignaciotessio </a>
  
-  <a href="https://www.campusmvp.es/recursos/" title="direccion_1">@joseignaciotessio</a>
--
-- @jorgeriosf
+<a href="https://github.com/jorgeriosf/" title="Jorge Ríos">@jorgeriosf</a>
 
 
 
 
  
-## Índice de contenidos
+## Índice de contenidos :bookmark_tabs:
 * [Objetivos](#item1)
 * [Pre-requisitos](#item2)
 * [Comenzando](#item3)
-* [Contenido 4](#item4)
- 
-Lorem ipsum dolor
+* [Ejecución y revisión del código](#item4)
  
 <a name="item1"></a>
 ## Objetivos :dart:
@@ -28,7 +28,7 @@ Lorem ipsum dolor
 Desarrollar una WEB Django con patrón MVT como parte de la *"LA ENTREGA INTERMEDIA DEL PROYECTO FINAL"*.         
 
 
-Nuestro proyecto contempla el despliegue de una página web de un emprendimiento de Bebidas Saludables (con actividad en Chile)
+Nuestro proyecto contempla el despliegue de una página web de un emprendimiento de Bebidas Saludables Nutrisur :registered: (con actividad en Chile)
 
 En esta entrega intermedia nuestro proyecto incluye:
 
@@ -43,20 +43,8 @@ En esta entrega intermedia nuestro proyecto incluye:
 3- Contiene un formulario para insertar datos en cada una de las clases
 anteriormente señaladas.
 
-4- Permite la busqueda de productos en la base de datos.
-    
-
-
-
-
-2- Ordenados en 3 modulos por PRODUCTOS, CATEGORIAS Y PRESENTAIONES
-
-3- Se puede por formulario agregar productos a los 3 modulos 
-
-4- Desde el buscador se puede buscar productos ingresando algun valor de referencia
-
-
-
+4- Permite la busqueda de productos en la base de datos ingresando algún valor de referencia
+   
  
 [Subir](#top)
  
@@ -73,65 +61,44 @@ anteriormente señaladas.
 [Subir](#top)
  
 <a name="item3"></a>
-### Comenzando 🚀
+## Comenzando 🚀
 
 - Clonar este repositorio https://github.com/joseignaciotessio/Entrega1-Rios-Tessio
-- Ejecutar el proyecto en un IDE ya sea en entorno virual o local
+- Ejecutar el proyecto en un IDE ya sea en un entorno virual o local
 
-- 
- 
+- Verificar que esté django instalado:
+  
+
+```
+pip list
+```
+- Para lanzar el servidor
+
+```
+python3 manage.py runserver
+
+```
+
+⚠️ 🆘 En caso que django no esté instalado ejecutar el siguiente
+código para su instalación:
+
+```
+pip install django
+
+```
 
  
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
  
 [Subir](#top)
  
 <a name="item4"></a>
-### Contenido 4
- 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
- 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
- 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Ejecución y revisión del código :computer:
+
+Una vez ejecutado los pasos anteriores ejecutar las pruebas de código 
+
  
 [Subir](#top)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Requerimientos
-Python 
-Django 
-
-Emprendimiento de Bebidas Saludables (en actividad en CHILE)
-1-El website permite conocer los productos actuales a la venta. 
-**Modulo NUESTROS PRODUCTOS 
-**Modulo de CATEGORIAS
-**Modulo PRESENTACIONES
-
-2- Ordenados en 3 modulos por PRODUCTOS, CATEGORIAS Y PRESENTAIONES
-
-3- Se puede por formulario agregar productos a los 3 modulos 
-
-4- Desde el buscador se puede buscar productos ingresando algun valor de referencia
-
-consignas de entrega todas ok.
