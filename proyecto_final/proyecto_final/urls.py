@@ -1,15 +1,15 @@
 from django.contrib import admin
 from django.urls import path   
-from nutrisur.views import create_products, productos, categorias, envases, create_categorias, create_presentaciones, redirect_search
+from nutrisur.views import create_products, products_list, categories, container, create_categories, create_presentations, redirect_search
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Healthdrink/', productos, name ='Healthdrink'),
-    path('Category/', categorias, name = 'Category'),
-    path('Container/', envases, name = 'Container'),
-    path('Formulario_carga_productos/',create_products, name = 'Formulario_carga_productos'),
-    path('Formulario_carga_categorias/',create_categorias, name = 'Formulario_carga_categorias'),
-    path('create_presentaciones/',create_presentaciones, name = 'create_presentaciones'),
+    path('Healthdrink/', products_list, name ='Healthdrink'),
+    path('Category/',categories, name = 'Category'),
+    path('Container/', container, name = 'Container'),
+    path('Products_upload_form/',create_products, name = 'Products_upload_form'),
+    path('Categories_upload_form/',create_categories, name = 'Categories_upload_form'),
+    path('create_presentaciones/',create_presentations, name = 'create_presentaciones'),
     path('redirect_search/',redirect_search, name = 'redirect_search')
 ]

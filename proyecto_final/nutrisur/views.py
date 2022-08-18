@@ -3,26 +3,26 @@ from django.shortcuts import redirect, render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
 from nutrisur.models import Container
-from nutrisur.forms import Formulario_carga_productos
-from nutrisur.forms import Formulario_carga_categorias
-from nutrisur.forms import Formulario_carga_presentaciones
+from nutrisur.forms import Products_upload_form
+from nutrisur.forms import Categories_upload_form
+from nutrisur.forms import Presentations_upload_form
 
 
-def productos(request):
-    consulta = Healthdrink.objects.all()
-    context = {'Healthdrink': consulta}
+def products_list(request):
+    search = Healthdrink.objects.all()
+    context = {'Healthdrink': search}
     return render(request, "healthdrink.html", context=context)
 
 
-def categorias(request):
-    consulta = Category.objects.all()
-    context = {'Category': consulta}
+def categories(request):
+    search = Category.objects.all()
+    context = {'Category': search}
     return render(request, "category.html", context=context)
 
 
-def envases(request):
-    consulta = Container.objects.all()
-    context = {'Container': consulta}
+def container(request):
+    search = Container.objects.all()
+    context = {'Container': search}
     return render(request, "container.html", context=context)
 
 
@@ -30,7 +30,7 @@ def create_products(request):
     print(request.POST)
 
     if request.method == 'POST':
-        form = Formulario_carga_productos(request.POST)
+        form = Products_upload_form(request.POST)
 
         if form.is_valid():
             Healthdrink.objects.create(
@@ -39,55 +39,55 @@ def create_products(request):
                 price=form.cleaned_data['price'],
                 country=form.cleaned_data['country']
             )
-            return redirect(productos)
+            return redirect(products_list)
 
     elif request.method == 'GET':
-        form = Formulario_carga_productos
+        form = Products_upload_form
         context = {'form': form}
-        return render(request, 'carga_productos.html', context=context)
+        return render(request, 'products_load.html', context=context)
 
 
-def create_categorias(request):
+def create_categories(request):
     print(request.POST)
 
     if request.method == 'POST':
-        form = Formulario_carga_categorias(request.POST)
+        form = Categories_upload_form(request.POST)
 
         if form.is_valid():
             Category.objects.create(
                 categoria=form.cleaned_data['categoria'],
                 description=form.cleaned_data['description'],
             )
-            return redirect(categorias)
+            return redirect(categories)
 
     elif request.method == 'GET':
-        form = Formulario_carga_categorias
+        form = Categories_upload_form
         context = {'form': form}
-        return render(request, 'carga_categorias.html', context=context)
+        return render(request, 'category_load.html', context=context)
 
 
-def create_presentaciones(request):
+def create_presentations(request):
     print(request.POST)
 
     if request.method == 'POST':
-        form = Formulario_carga_presentaciones(request.POST)
+        form = Presentations_upload_form(request.POST)
 
         if form.is_valid():
             Container.objects.create(
                 tipo=form.cleaned_data['tipo'],
                 volumen=form.cleaned_data['volumen'],
             )
-            return redirect(envases)
+            return redirect(container)
 
     elif request.method == 'GET':
-        form = Formulario_carga_presentaciones
+        form = Presentations_upload_form
         context = {'form': form}
-        return render(request, 'carga_presentaciones.html', context=context)
+        return render(request, 'presentations_load.html', context=context)
 
 def redirect_search(request):
     search = request.GET['search']
-    consulta = Healthdrink.objects.filter(name__icontains=search)
-    context = {'consulta': consulta}
+    search = Healthdrink.objects.filter(name__icontains=search)
+    context = {'search': search}
     return render(request, 'search_any_products.html', context=context)
   
 
