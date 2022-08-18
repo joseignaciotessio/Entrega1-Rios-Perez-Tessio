@@ -1,0 +1,105 @@
+[33md573271[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #2 from joseignaciotessio/unify_names
+[33m0b8e572[m cambio de nombres en textos y en cadenas
+[33m212223a[m Readmi rev
+[33m9e3aafe[m las update redmi
+[33m137ed1d[m Update Readme
+[33m6a98b27[m Update readme 2
+[33ma1302df[m Update README.md
+[33md88d350[m admin_2
+[33m5301a82[m Merge branch 'Jorge_09_08'
+[33m88087ba[m[33m ([m[1;31morigin/Jorge_09_08[m[33m)[m panel admin
+[33m6884db5[m todo ok
+[33mee45415[m todo ok.
+[33ma34c486[m Probando con tarjetas
+[33ma201b3a[m Busqueda funcionando :-)
+[33mea95f66[m busqueda llega a página en blanco
+[33m4d9375c[m redirect del url funcionando. falta función y html
+[33m08e7570[m error en busqueda productos
+[33m9e11e43[m merge cambios en context
+[33m9d9b9a7[m[33m ([m[1;31morigin/Jorge-Domingo-PM[m[33m)[m domingo
+[33m07ba019[m ok
+[33md261eed[m buscar
+[33m1a4d24f[m tratando de corregir form BUSCAR
+[33mef7c163[m readme
+[33m8b1625a[m Elimino formulario PRIMERO. de prueba. queda ok
+[33mbccb290[m ok
+[33m570e062[m correccion
+[33mff6fe86[m reverso modif
+[33m36a4f7a[m buscar
+[33mcc93052[m trabajando en search
+[33m420d705[m Formularios para los 3 modelos OKKKK FUNCIONAN
+[33m5f3eb16[m trbajando 3er form
+[33m48a6b17[m revisando con jorge REDIRECT
+[33m2500b2e[m agregue info al README
+[33m68ec765[m toque
+[33m5c10a1d[m elimino  media
+[33m3d529ec[m buscador. no se rompe pero no trae la info
+[33m246d8b5[m trabajando BUSCAR
+[33m0a4f4d8[m funcionaidad al buscador
+[33m5bcadba[m redirect
+[33m4663e75[m redirect
+[33m2f19a5d[m Pull  verficando
+[33maccc939[m Hasta views.py ===> if form.is_valid()
+[33m3422818[m Formulario listo y  operativo ----
+[33me9c7640[m forms - FuncionandO
+[33m387b92c[m modificaciones
+[33m670f57b[m Merge branch 'jorge_sabado_AM'
+[33m0995eea[m[33m ([m[1;31morigin/jorge_sabado_AM[m[33m)[m Jorge tabajando en forms
+[33mf7cce7a[m subida 2
+[33m93a3310[m vuelta al otro def create_products
+[33mfe2503e[m OK
+[33m46c1193[m TRABAJANDO DESDE vsc de JORGE
+[33m81998aa[m rama jorge
+[33m96003da[m correccion action
+[33m382a8b0[m modif base desde ADMIN
+[33m13d4185[m reparando form
+[33mae558b9[m forms
+[33me0b6d09[m formularios
+[33m4e1c2e1[m html css y form
+[33md84ff6a[m creacion form y html
+[33m3de0964[m ok agregue desde panel adm un prodcuto
+[33m607b7db[m importo modelos a administrar
+[33m6ecdc2a[m css
+[33m7efee98[m show
+[33m7f4048e[m correciones
+[33m2b5d626[m reparaciones
+[33m625e590[m correccion
+[33mda00a01[m ok url
+[33m7ad5b7f[m error reparado
+[33m16c4cb3[m reparacion
+[33mabba6b0[m reparacion
+[33ma244c2e[m path
+[33m22c001b[m modificando urls
+[33mcda1948[m cargo datos en BASE DATOS por shell
+[33mfbbb16a[m carga datos shell
+[33m5fb0402[m migrate
+[33m04dd1de[m models
+[33m67785a0[m correcciones con JORGE
+[33mef1f2ad[m base into template
+[33me1de3d4[m templates
+[33m9415220[m templates
+[33m63d1759[m espacios
+[33mc67b850[m espacios
+[33m839e964[m extends en los templates
+[33m0ca5fe6[m extends en los 3 templates
+[33m5d5048d[m shell
+[33mf3ea597[m ok
+[33m14cefec[m superuser y add administradores JORGE JOSUE Y YO
+[33mfc9d231[m path
+[33m103facd[m correccion pathsss
+[33m19c64ef[m elimino index
+[33mb0753c8[m 3er class en models.
+[33m4cbc926[m README comenzando a sumar info
+[33ma60a932[m ok
+[33md37c048[m Agrego 2da class
+[33m4935c0f[m reparacion. OKKK
+[33m8c9b757[m error en textfield
+[33m1c6b581[m dat
+[33m3fe6c77[m revision models
+[33m382db7f[m creation 1 class in models+url+views
+[33m4e0254d[m config de settings
+[33md43d15e[m config de stettings
+[33mfedf5f9[m correccion de archivo html
+[33m293524c[m 2do commit
+[33m6690a57[m primer commit
+[33m418f0c4[m Initial commit
