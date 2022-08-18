@@ -6,12 +6,12 @@
 
 {% block contenido_que_cambia %}
 
-{% for consulta in consulta %}
+{% for search in search %}
 <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-light">
-      <li class="list-group-item px-3">Nombre: {{consulta.name}}</li>
-      <li class="list-group-item px-3">Precio: {{consulta.price}} </li>
-      <li class="list-group-item px-3">País de origen: {{consulta.country}} </li>
+      <li class="list-group-item px-3">Nombre: {{search.name}}</li>
+      <li class="list-group-item px-3">Precio: {{search.price}} </li>
+      <li class="list-group-item px-3">País de origen: {{search.country}} </li>
     </ul>
   </div>
 {% endfor %}
