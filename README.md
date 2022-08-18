@@ -37,14 +37,14 @@ En esta entrega intermedia nuestro proyecto incluye:
 
 2- Tres clases en models:
 
-- Nuestros productos.
+- Nuestros products.
 - Categorías.
 - Presentaciones.
 
 3- Contiene un formulario para insertar datos en cada una de las clases
 anteriormente señaladas.
 
-4- Permite la busqueda de productos en la base de datos ingresando algún valor de referencia
+4- Permite la busqueda de products en la base de datos ingresando algún valor de referencia
    
  
 [Subir](#top)

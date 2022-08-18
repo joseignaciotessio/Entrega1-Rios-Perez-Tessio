@@ -1,4 +1,4 @@
-from re import search
+from cgi import print_exception
 from django.shortcuts import redirect, render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
@@ -82,7 +82,7 @@ def create_presentations(request):
     elif request.method == 'GET':
         form = Presentations_upload_form
         context = {'form': form}
-        return render(request, 'presentations_load.html', context=context)
+        return render(request, 'presentation_load.html', context=context)
 
 def redirect_search(request):
     search = request.GET['search']
