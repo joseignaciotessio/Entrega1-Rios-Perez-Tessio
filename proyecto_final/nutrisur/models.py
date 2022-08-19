@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 class Healthdrink(models.Model):
     name = models.CharField(max_length=40)
@@ -15,3 +17,5 @@ class Container(models.Model):
     tipo = models.CharField(max_length=50,null=True,blank=True)
     volumen = models.IntegerField()
     
+class sale(LoginRequiredMixin):
+    oferta = models.CharField(max_length=50)

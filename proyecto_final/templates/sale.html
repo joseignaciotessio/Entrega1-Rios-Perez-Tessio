@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    sale
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% for i in sale %}
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-light">
+      <li class="list-group-item px-3">oferta: {{i.oferta}}</li>
+    </ul>
+  </div>
+
+  {% endfor %}
+
+{% endblock %}
