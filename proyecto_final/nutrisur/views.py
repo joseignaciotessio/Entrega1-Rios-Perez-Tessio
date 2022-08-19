@@ -1,4 +1,4 @@
-from re import search
+#from re import search
 from django.shortcuts import redirect, render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
@@ -84,12 +84,14 @@ def create_presentations(request):
         context = {'form': form}
         return render(request, 'presentations_load.html', context=context)
 
-def redirect_search(request):
+
+def search_products(request):
     search = request.GET['search']
-    consulta = Healthdrink.objects.filter(name__icontains=search)
-    context = {'consulta': consulta}
-    return render(request, 'search_any_products.html', context=context)
-  
+    consulta = Healthdrink.objects.filter(name__icontains=search) 
+    context = {'Healthdrink': consulta}
+    return render(request,'search_any_products.html', context=context)
+
+
 def index(request):
     return render(request, 'index.html')
 

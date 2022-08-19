@@ -1,19 +1,24 @@
+
 {% extends 'base.html' %}
 
 {% block titulo %}
-    Búsqueda de productos
+    Busqueda de Productos
 {% endblock %}
 
 {% block contenido_que_cambia %}
 
-{% for search in search %}
-<div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-light">
-      <li class="list-group-item px-3">Nombre: {{search.name}}</li>
-      <li class="list-group-item px-3">Precio: {{search.price}} </li>
-      <li class="list-group-item px-3">País de origen: {{search.country}} </li>
-    </ul>
-  </div>
+    {% for i in Healthdrink %}
+ 
+    <div class="card" style="width: 18rem;">
+    
+    <div class="card-body">
+            <h5 class="card-title">{{i.name}}</h5>
+            <p class="card-text">Descripcion: {{i.description}}</p>
+            <p class="card-text">Precio: {{i.price}}</p>
+            <p class="card-text">Pais Origen: {{i.country}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+
 {% endfor %}
 
 {% endblock %}
+
