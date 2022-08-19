@@ -8,21 +8,21 @@ from nutrisur.forms import Categories_upload_form
 from nutrisur.forms import Presentations_upload_form
 
 
-def products_list(request):
-    search = Healthdrink.objects.all()
-    context = {'Healthdrink': search}
+def products(request):
+    consulta = Healthdrink.objects.all()
+    context = {'Healthdrink': consulta}
     return render(request, "healthdrink.html", context=context)
 
 
 def categories(request):
-    search = Category.objects.all()
-    context = {'Category': search}
+    consulta = Category.objects.all()
+    context = {'Category': consulta}
     return render(request, "category.html", context=context)
 
 
-def container(request):
-    search = Container.objects.all()
-    context = {'Container': search}
+def containers(request):
+    consulta = Container.objects.all()
+    context = {'Container': consulta}
     return render(request, "container.html", context=context)
 
 
@@ -39,7 +39,7 @@ def create_products(request):
                 price=form.cleaned_data['price'],
                 country=form.cleaned_data['country']
             )
-            return redirect(products_list)
+            return redirect(productos)
 
     elif request.method == 'GET':
         form = Products_upload_form
@@ -58,12 +58,12 @@ def create_categories(request):
                 categoria=form.cleaned_data['categoria'],
                 description=form.cleaned_data['description'],
             )
-            return redirect(categories)
+            return redirect(categorias)
 
     elif request.method == 'GET':
         form = Categories_upload_form
         context = {'form': form}
-        return render(request, 'category_load.html', context=context)
+        return render(request, 'search_any_products.html', context=context)
 
 
 def create_presentations(request):
@@ -77,7 +77,7 @@ def create_presentations(request):
                 tipo=form.cleaned_data['tipo'],
                 volumen=form.cleaned_data['volumen'],
             )
-            return redirect(container)
+            return redirect(envases)
 
     elif request.method == 'GET':
         form = Presentations_upload_form
@@ -86,8 +86,13 @@ def create_presentations(request):
 
 def redirect_search(request):
     search = request.GET['search']
-    search = Healthdrink.objects.filter(name__icontains=search)
-    context = {'search': search}
+    consulta = Healthdrink.objects.filter(name__icontains=search)
+    context = {'consulta': consulta}
     return render(request, 'search_any_products.html', context=context)
   
+def index(request):
+    return render(request, 'index.html')
 
+
+def index(request):
+    return render(request, 'index.html')

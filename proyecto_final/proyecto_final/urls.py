@@ -1,15 +1,17 @@
 from django.contrib import admin
-from django.urls import path   
-from nutrisur.views import create_products, products_list, categories, container, create_categories, create_presentations, redirect_search
+from django.urls import path, include   
+from nutrisur.views import create_products, products, categories, containers, create_categories, create_presentations, redirect_search, index
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Healthdrink/', products_list, name ='Healthdrink'),
+    path('Healthdrink/', products, name ='Healthdrink'),
+    path('', index, name='index'),
     path('Category/',categories, name = 'Category'),
-    path('Container/', container, name = 'Container'),
+    path('Container/', containers, name = 'Container'),
     path('Products_upload_form/',create_products, name = 'Products_upload_form'),
     path('Categories_upload_form/',create_categories, name = 'Categories_upload_form'),
     path('create_presentaciones/',create_presentations, name = 'create_presentaciones'),
-    path('redirect_search/',redirect_search, name = 'redirect_search')
+    path('redirect_search/',redirect_search, name = 'redirect_search'),
+    path('users/', include('users.urls')),
 ]
