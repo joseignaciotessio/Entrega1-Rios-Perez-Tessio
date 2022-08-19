@@ -39,7 +39,7 @@ def create_products(request):
                 price=form.cleaned_data['price'],
                 country=form.cleaned_data['country']
             )
-            return redirect(productos)
+            return redirect(products)
 
     elif request.method == 'GET':
         form = Products_upload_form
@@ -58,7 +58,7 @@ def create_categories(request):
                 categoria=form.cleaned_data['categoria'],
                 description=form.cleaned_data['description'],
             )
-            return redirect(categorias)
+            return redirect(categories)
 
     elif request.method == 'GET':
         form = Categories_upload_form
@@ -77,7 +77,7 @@ def create_presentations(request):
                 tipo=form.cleaned_data['tipo'],
                 volumen=form.cleaned_data['volumen'],
             )
-            return redirect(envases)
+            return redirect(containers)
 
     elif request.method == 'GET':
         form = Presentations_upload_form

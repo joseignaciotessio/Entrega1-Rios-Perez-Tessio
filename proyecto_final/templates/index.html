@@ -6,7 +6,16 @@
 
 {% block contenido_que_cambia %}
 
-<h1>"Este es el index"<h1>
+<h1>"QUE ES NUTRISUR"<h1>
 
+    <h3>Ubicados en Valdivia, SOMOS una empresa compuesta por 3 emprendedores apoyados por CORFO Los Ríos. Nos une la búsqueda de una alimentación sana y nutritiva, comprometidos con el medio ambiente, un buen aprovechamiento de nuestros recursos naturales y conscientes de elaborar productos con una baja huella de carbono."<h3>
 
+<h2>{{request.user.is_authenticated}}
+
+        {% if message %}
+
+        <h2>{{message}}</h2>
+    
+    {% endif %}
+    
 {% endblock %}
