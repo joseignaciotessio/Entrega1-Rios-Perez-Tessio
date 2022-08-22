@@ -7,10 +7,16 @@
 {% block contenido_que_cambia %}
 
 {% for i in Healthdrink %}
-    <p><a style ="color:blue">{{i.description}} </a><p>
-        <p><a style ="color:green">{{i.price}} </a><p>
-            <p><a>{{i.country}} </a><p>
-
+    
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-light">
+        <li class="list-group-item px-3">Producto: {{i.categoria}}</li>
+        <li class="list-group-item px-3">Descripción: {{i.description}} </li>
+        <li class="list-group-item px-3">Precio: {{i.price}} </li>
+        <li class="list-group-item px-3">País: {{i.country}} </li>
+        
+        </ul>
+    </div>
 
 {% endfor %}
 
