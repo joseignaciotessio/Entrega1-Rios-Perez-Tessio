@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+<div class="container">
+    <div class="container pt-3">
+
+{% load crispy_forms_tags %}
+
 {% block titulo %}
-    Login
+    Register
 {% endblock %}
 
 {% block contenido_que_cambia %}
@@ -9,19 +17,24 @@
 <form action="" method="POST">
 {% csrf_token %}
 
-    <table>
 
-        {{form.as_table}}
 
-    </table>
+        {{form | crispy}}
 
-    <p><input type="submit" value="Iniciar sesion"></p>
+
+ 
+        <br>
+        
+                &nbsp;
+                <button type="submit" id="btnEnviar" class="btn btn-primary">Iniciar sesión</button>
+                &nbsp;
+                
+        </p>
+        
+
+        </div>
 
     </form>
-
-    {% if error %}
-        <p style="color:red;">{{error}}</p>
-    {% endif %}
 
 
 {% endblock %}

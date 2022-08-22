@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.mixins import LoginRequiredMixin
+#from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class Healthdrink(models.Model):
@@ -17,5 +17,6 @@ class Container(models.Model):
     tipo = models.CharField(max_length=50,null=True,blank=True)
     volumen = models.IntegerField()
     
-class sale(LoginRequiredMixin):
+class Sale(models.Model):
     oferta = models.CharField(max_length=50)
+    descuento = models.IntegerField()

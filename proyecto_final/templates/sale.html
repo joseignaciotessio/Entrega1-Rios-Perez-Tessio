@@ -6,13 +6,16 @@
 
 {% block contenido_que_cambia %}
 
-{% for i in sale %}
-<div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-light">
-      <li class="list-group-item px-3">oferta: {{i.oferta}}</li>
-    </ul>
-  </div>
+<h1>"NUETRAS OFERTAS"<h1>
 
+{% for i in Sale %}
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-light">
+    <li class="list-group-item px-3">Oferta: {{i.oferta}}</li>
+    <li class="list-group-item px-3">Descuento: {{i.descuento}} </li>
+  </ul>
+</div>
   {% endfor %}
 
 {% endblock %}
+

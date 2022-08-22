@@ -6,7 +6,7 @@ from nutrisur.models import Container
 from nutrisur.forms import Products_upload_form
 from nutrisur.forms import Categories_upload_form
 from nutrisur.forms import Presentations_upload_form
-from nutrisur.models import sale
+from nutrisur.models import Sale
 from django.contrib.auth.decorators import login_required
 
 def products(request):
@@ -98,6 +98,10 @@ def index(request):
 
 @login_required
 def sale(request):
-    consulta = sale.objects.all()
-    context = {'sale': consulta}
-    return render(request, "sale.html", context=context)
+    consulta = Sale.objects.all()
+    context = {'Sale': consulta}
+    return render(request, "sale.html", context=context) 
+
+
+
+   
