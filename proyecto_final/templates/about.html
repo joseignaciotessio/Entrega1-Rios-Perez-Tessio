@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Acerca de Nosotros
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% for i in About %}
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-light">
+      <li class="list-group-item px-3">nosotros: {{i.nosotros}}</li>
+      <li class="list-group-item px-3">profesion: {{i.profesion}} </li>
+    </ul>
+  </div>
+
+  {% endfor %}
+
+{% endblock %}

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include   
-from nutrisur.views import create_products, products, categories, containers, create_categories, create_presentations, search_products, index, sale
+from nutrisur.views import create_products, products, categories, containers, create_categories, create_presentations, search_products, index, sale, about
 
 
 urlpatterns = [
@@ -14,5 +14,6 @@ urlpatterns = [
     path('create_presentaciones/',create_presentations, name = 'create_presentaciones'),
     path('search_products/',search_products, name = 'search_products'),
     path('users/', include('users.urls')),
-    path('sale/', sale, name ='sale')
+    path('sale/', sale, name ='sale'),
+    path('about/', about, name ='about')
 ]

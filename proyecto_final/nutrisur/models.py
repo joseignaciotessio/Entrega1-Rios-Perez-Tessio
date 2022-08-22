@@ -20,3 +20,7 @@ class Container(models.Model):
 class Sale(models.Model):
     oferta = models.CharField(max_length=50)
     descuento = models.IntegerField()
+    
+class About(models.Model):
+    nosotros = models.CharField(max_length=50)
+    profesion = models.CharField(max_length=50)

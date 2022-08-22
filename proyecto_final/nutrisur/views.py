@@ -7,6 +7,7 @@ from nutrisur.forms import Products_upload_form
 from nutrisur.forms import Categories_upload_form
 from nutrisur.forms import Presentations_upload_form
 from nutrisur.models import Sale
+from nutrisur.models import About
 from django.contrib.auth.decorators import login_required
 
 def products(request):
@@ -102,6 +103,9 @@ def sale(request):
     context = {'Sale': consulta}
     return render(request, "sale.html", context=context) 
 
-
+def about(request):
+    consulta = About.objects.all()
+    context = {'About': consulta}
+    return render(request, "about.html", context=context) 
 
    
