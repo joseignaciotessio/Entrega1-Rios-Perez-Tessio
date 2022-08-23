@@ -46,4 +46,4 @@ def register(request):
 
 def show_profile(request):
     if request.user.is_authenticated:
-        return HttpResponse(request.user.profile.phone)
+        return HttpResponse(request.user.profile.address)

@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include   
 from nutrisur.views import create_products, products, categories, containers, create_categories, create_presentations, search_products, index, sale, about
-
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,4 +17,4 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('sale/', sale, name ='sale'),
     path('about/', about, name ='about')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
