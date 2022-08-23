@@ -12,7 +12,7 @@
  
 <a href="https://github.com/jorgeriosf/" title="Jorge Ríos">@jorgeriosf</a>
 
-## Forma de trabajo :pencil2:
+## Forma de trabajo 💼
 
 
 
