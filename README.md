@@ -15,7 +15,7 @@
 ## Forma de trabajo :pencil2:
 
 
-=======
+
 Por decisión de equipo, el desarrollo de todo el proyecto se llevo a cabo en base a una agenda concreta (reuniones diarias coordinadas) via MEET, compartiendo pantalla en forma permantente, y escribiendo codigo en forma alternada.
 
 Esto permitio no solo el aporte de conocimientos compartidos, sino tambien un control dual en cada etapa.
