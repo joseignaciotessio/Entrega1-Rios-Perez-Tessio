@@ -13,9 +13,6 @@
 <a href="https://github.com/jorgeriosf/" title="Jorge Ríos">@jorgeriosf</a>
 
 
-
-
- 
 ## Índice de contenidos :bookmark_tabs:
 * [Objetivos](#item1)
 * [Pre-requisitos](#item2)
