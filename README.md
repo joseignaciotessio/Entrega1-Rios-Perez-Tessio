@@ -12,10 +12,10 @@
  
 <a href="https://github.com/jorgeriosf/" title="Jorge Ríos">@jorgeriosf</a>
 
-## Forma de trabajo :pencil2:
+## Forma de trabajo 💼
 
-<<<<<<< HEAD
-=======
+
+
 Por decisión de equipo, el desarrollo de todo el proyecto se llevo a cabo en base a una agenda concreta (reuniones diarias coordinadas) via MEET, compartiendo pantalla en forma permantente, y escribiendo codigo en forma alternada.
 
 Esto permitio no solo el aporte de conocimientos compartidos, sino tambien un control dual en cada etapa.
@@ -25,7 +25,7 @@ Dividimos algunas tareas puntuales, creando branch y luego uniendo los avances a
 Se logro en todo momento un excelente ritmo de trabajo, respetando las reuniones programadas en agenda el primer dia de planificacion del proyecto.
 
  
->>>>>>> 9397774cc112d7fd0afa4d319f1ea9baef5619cc
+
 ## Índice de contenidos :bookmark_tabs:
 * [Objetivos](#item1)
 * [Pre-requisitos](#item2)
