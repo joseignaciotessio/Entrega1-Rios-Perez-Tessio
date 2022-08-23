@@ -6,9 +6,16 @@
 
 {% block contenido_que_cambia %}
 
-<h1>"NUETRAS OFERTAS"<h1>
 
-{% for i in Sale %}
+  <p><a style ="color:green">"Solo para registrados, un 35% de Descuento sobre la 1er compra. "</a><p>
+
+      <p style="background-color: #777799; color: #f1f1f1; font-weight: bold">
+        "Al hacer tu pedido, te indicaremos como obtener este beneficio al pagar "
+  </p>
+
+
+
+    {% for i in Sale %}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-light">
     <li class="list-group-item px-3">Oferta: {{i.oferta}}</li>
