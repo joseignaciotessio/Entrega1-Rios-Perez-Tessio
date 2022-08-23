@@ -32,14 +32,15 @@ def create_products(request):
     print(request.POST)
 
     if request.method == 'POST':
-        form = Products_upload_form(request.POST)
+        form = Products_upload_form(request.POST, request.FILE)
 
         if form.is_valid():
             Healthdrink.objects.create(
                 name=form.cleaned_data['name'],
                 description=form.cleaned_data['description'],
                 price=form.cleaned_data['price'],
-                country=form.cleaned_data['country']
+                country=form.cleaned_data['country'],
+                image = form.cleaned_data['image']
             )
             return redirect(products)
 
