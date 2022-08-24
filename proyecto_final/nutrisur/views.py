@@ -32,7 +32,7 @@ def create_products(request):
     print(request.POST)
 
     if request.method == 'POST':
-        form = Products_upload_form(request.POST, request.FILE)
+        form = Products_upload_form(request.POST, request.FILES)
 
         if form.is_valid():
             Healthdrink.objects.create(
