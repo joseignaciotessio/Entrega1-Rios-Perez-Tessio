@@ -13,12 +13,12 @@ class Category(models.Model):
     categoria = models.CharField(max_length=50,null=True,blank=True)
     description = models.CharField(max_length=150,null=True,blank=True)
     activo = models.BooleanField(default=True)
-    image = models.ImageField(upload_to='products/', null=True, blank=True)
+
 
 class Container(models.Model):
     tipo = models.CharField(max_length=50,null=True,blank=True)
     volumen = models.IntegerField()
-    image = models.ImageField(upload_to='products/', null=True, blank=True)
+
     
 class Sale(models.Model):
     oferta = models.CharField(max_length=50)
