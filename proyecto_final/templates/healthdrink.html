@@ -9,8 +9,8 @@
 {% for i in Healthdrink %}
 
 <div class="card" style="width: 18rem;">
-  {% if product.image %}
-        <img src="{{product.image.url}}" class="card-img-top">
+  {% if i.image %}
+        <img src="{{i.image.url}}" class="card-img-top">
         {% else %}
         <img src="https://img.freepik.com/vector-premium/etiqueta-sello-verde-100-ciento-natural-productos-aditivos-ni-conservantes_101884-1703.jpg" class="card-img-top">
         {% endif %}
