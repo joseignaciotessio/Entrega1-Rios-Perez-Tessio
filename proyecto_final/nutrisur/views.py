@@ -27,7 +27,7 @@ def containers(request):
     context = {'Container': consulta}
     return render(request, "container.html", context=context)
 
-
+@login_required
 def create_products(request):
     print(request.POST)
 
@@ -49,7 +49,7 @@ def create_products(request):
         context = {'form': form}
         return render(request, 'products_load.html', context=context)
 
-
+@login_required
 def create_categories(request):
     print(request.POST)
 
@@ -68,7 +68,7 @@ def create_categories(request):
         context = {'form': form}
         return render(request, 'search_any_products.html', context=context)
 
-
+@login_required
 def create_presentations(request):
     print(request.POST)
 

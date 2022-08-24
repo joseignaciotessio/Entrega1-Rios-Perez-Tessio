@@ -13,11 +13,11 @@ class Products_upload_form(forms.Form):
 class Categories_upload_form(forms.Form):
     categoria = forms.CharField(max_length=50)
     description = forms.CharField(max_length=150)
-    image = forms.ImageField(required=False)
+
 
 
 class Presentations_upload_form(forms.Form):
 
     tipo = forms.CharField(max_length=50)
     volumen = forms.IntegerField()
-    image = forms.ImageField(required=False)
+
