@@ -16,3 +16,4 @@ class User_registration_form(UserCreationForm):
 
         help_texts = {k:'' for k in fields}
 
+
