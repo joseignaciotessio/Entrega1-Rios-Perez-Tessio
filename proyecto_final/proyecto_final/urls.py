@@ -16,5 +16,5 @@ urlpatterns = [
     path('search_products/',search_products, name = 'search_products'),
     path('users/', include('users.urls')),
     path('sale/', sale, name ='sale'),
-    path('about/', about, name ='about')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('about/', about, name ='about'),
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

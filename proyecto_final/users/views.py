@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
+from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth import login, logout, authenticate
 
@@ -47,3 +48,25 @@ def register(request):
 def show_profile(request):
     if request.user.is_authenticated:
         return HttpResponse(request.user.profile.address)
+
+
+# Creando edit user profile
+"""
+@login_required
+def edit_user_profile(request):
+    if request.method == 'POST':
+        form = UserChangeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+        else:
+            context = {'errors':form.errors}
+            form = UserChangeForm()
+            context['form'] = form
+            return render(request, 'users/register.html', context)
+
+    elif request.method == 'GET':
+        form = UserChangeForm()
+        return render(request, 'users/register.html', {'form': form})
+    
+"""
