@@ -1,9 +1,10 @@
 from django.contrib import admin
-from django.urls import path, include   
+from django.urls import path, include
 from nutrisur.views import create_products, products, categories, containers, create_categories, create_presentations, search_products, index, sale, about
 from django.conf.urls.static import static
 from django.conf import settings
 from nutrisur.views import delete_product, update_product,list_products
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Healthdrink/', products, name ='Healthdrink'),
@@ -17,11 +18,8 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('sale/', sale, name ='sale'),
     path('about/', about, name ='about'),
-<<<<<<< HEAD
     path('delete_product/<int:pk>/', delete_product, name='delete_product'),
     path('update_product/<int:pk>/', update_product, name='update_product'),
     path('list_products/', list_products, name='list_products'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-=======
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> 400235de5124b8a84e6f94ee3f1bb872bbfb97e7
+

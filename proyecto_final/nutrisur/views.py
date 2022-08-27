@@ -1,5 +1,5 @@
 #from re import search
-import profile
+
 from django.shortcuts import redirect, render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
@@ -111,21 +111,6 @@ def sale(request):
     consulta = Sale.objects.all()
     context = {'Sale': consulta}
     return render(request, "sale.html", context=context) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @login_required

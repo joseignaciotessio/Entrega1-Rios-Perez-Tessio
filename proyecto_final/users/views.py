@@ -50,8 +50,7 @@ def show_profile(request):
         return HttpResponse(request.user.profile.address)
 
 
-# Creando edit user profile
-"""
+
 @login_required
 def edit_user_profile(request):
     if request.method == 'POST':
@@ -69,4 +68,3 @@ def edit_user_profile(request):
         form = UserChangeForm()
         return render(request, 'users/register.html', {'form': form})
     
-"""
