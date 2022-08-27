@@ -109,4 +109,47 @@ def about(request):
     context = {'About': consulta}
     return render(request, "about.html", context=context) 
 
-   
+@login_required
+def list_products(request):
+    if request.user.is_authenticated:
+            products = Healthdrink.objects.all()
+            context = {'products':products}
+            return render(request, 'products_list.html', context=context)
+
+    return redirect('login')
+
+
+@login_required
+def delete_product(request, pk):
+    if request.method == 'GET':
+        products = Healthdrink.objects.get(pk=pk)
+        context = {'products':products}
+        return render(request, 'delete_product.html', context=context)
+    elif request.method == 'POST':
+        product = Healthdrink.objects.get(pk=pk)
+        product.delete()
+        return redirect(products)
+ 
+@login_required   
+def update_product(request, pk):
+    if request.method == 'POST':
+        form = Products_upload_form(request.POST)
+        if form.is_valid():
+            product = Healthdrink.objects.get(id=pk)
+            product.name = form.cleaned_data['name']
+            product.price = form.cleaned_data['price']
+            product.description = form.cleaned_data['description']
+            product.save()
+
+            return redirect(Healthdrink)
+
+
+    elif request.method == 'GET':
+        product = Healthdrink.objects.get(id=pk)
+
+        form = Products_upload_form(initial={'name':product.name,'price':product.price,'description':product.description,})
+        context = {'form':form}
+        return render(request, 'update_product.html', context=context)
+
+
+
