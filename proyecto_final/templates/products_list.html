@@ -19,8 +19,8 @@ Listado de Productos
         <p class="card-text">Descripcion: {{product.description}}</p>
         <p class="card-text">Precio: {{product.price}}</p>
         <p class="card-text">Pais: {{product.country}}</p>
-        <a href="/products/update-product/{{product.id}}" class="btn btn-primary">Editar</a>
-        <a href="/products/delete-product/{{product.id}}/" class="btn btn-danger">Borrar</a>
+        <a href="/update_product/{{product.id}}/" class="btn btn-primary">Editar</a>
+        <a href="/delete_product/{{product.id}}/" class="btn btn-danger">Borrar</a>
     </div>
 </div>
 {% endfor %}
