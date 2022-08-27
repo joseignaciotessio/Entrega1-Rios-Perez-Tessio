@@ -5,7 +5,22 @@
 {% endblock %}
 
 {% block contenido_que_cambia %}
+
+<p style="background-color: #777799; color: #f1f1f1; font-weight: bold">
+  "Jorge y Jose Ignacio, se embarcaron en este proyecto en 2022, apostando buscando mejorar la calidad de vida de las personas."
+ 
+</p>
+<p style="background-color: #777799; color: #f1f1f1; font-weight: bold">
+
+  "Desde lo profesional, ambos con largas carreras en el mundo corporativo y publico, este mix sin dudas sumo al equipo de herramientas para profesionalizar el trabajo y lograr mayor eficiencia"
+</p>
+
+<p style="background-color: #777799; color: #f1f1f1; font-weight: bold">
+  "En Mayo 2022 se embarcaron en el mundo de la programacion, el cual les permitio aportar al emprendimiento un website creado ellos mismos"
+</p>
+
 <p>
+
 {% for i in About %}
 <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-light">
@@ -13,6 +28,8 @@
       <li class="list-group-item px-3">profesion: {{i.profesion}} </li>
     </ul>
   </div>
+
+ 
 
   {% endfor %}
   <p>
