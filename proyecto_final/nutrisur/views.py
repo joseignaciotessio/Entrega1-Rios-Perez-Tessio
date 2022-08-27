@@ -1,4 +1,5 @@
 #from re import search
+import profile
 from django.shortcuts import redirect, render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
@@ -9,6 +10,7 @@ from nutrisur.forms import Presentations_upload_form
 from nutrisur.models import Sale
 from nutrisur.models import About
 from django.contrib.auth.decorators import login_required
+
 
 def products(request):
     consulta = Healthdrink.objects.all()
@@ -26,6 +28,23 @@ def containers(request):
     consulta = Container.objects.all()
     context = {'Container': consulta}
     return render(request, "container.html", context=context)
+
+def search_products(request):
+    search = request.GET['search']
+    consulta = Healthdrink.objects.filter(name__icontains=search) 
+    context = {'Healthdrink': consulta}
+    return render(request,'search_any_products.html', context=context)
+
+
+def index(request):
+    return render(request, 'index.html')
+
+
+
+def about(request):
+    consulta = About.objects.all()
+    context = {'About': consulta}
+    return render(request, "about.html", context=context) 
 
 @login_required
 def create_products(request):
@@ -87,27 +106,27 @@ def create_presentations(request):
         context = {'form': form}
         return render(request, 'presentations_load.html', context=context)
 
-
-def search_products(request):
-    search = request.GET['search']
-    consulta = Healthdrink.objects.filter(name__icontains=search) 
-    context = {'Healthdrink': consulta}
-    return render(request,'search_any_products.html', context=context)
-
-
-def index(request):
-    return render(request, 'index.html')
-
 @login_required
 def sale(request):
     consulta = Sale.objects.all()
     context = {'Sale': consulta}
     return render(request, "sale.html", context=context) 
 
-def about(request):
-    consulta = About.objects.all()
-    context = {'About': consulta}
-    return render(request, "about.html", context=context) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @login_required
 def list_products(request):

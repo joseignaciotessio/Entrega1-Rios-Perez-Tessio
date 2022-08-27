@@ -17,7 +17,11 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('sale/', sale, name ='sale'),
     path('about/', about, name ='about'),
+<<<<<<< HEAD
     path('delete_product/<int:pk>/', delete_product, name='delete_product'),
     path('update_product/<int:pk>/', update_product, name='update_product'),
     path('list_products/', list_products, name='list_products'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> 400235de5124b8a84e6f94ee3f1bb872bbfb97e7
