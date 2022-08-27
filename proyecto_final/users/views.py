@@ -2,9 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
 from django.contrib.auth.decorators import login_required
-
 from django.contrib.auth import login, logout, authenticate
-
 from users.forms import User_registration_form
 
 def login_request(request):
@@ -48,7 +46,6 @@ def register(request):
 def show_profile(request):
     if request.user.is_authenticated:
         return HttpResponse(request.user.profile.address)
-
 
 
 @login_required
