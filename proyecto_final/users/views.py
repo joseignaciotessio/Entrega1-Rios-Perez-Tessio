@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm, UserChangeForm, 
+#from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth import login, logout, authenticate
 
 from users.forms import User_registration_form
 
-def login_request(request):
+"""def login_request(request):
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
@@ -51,7 +51,6 @@ def show_profile(request):
 
 
 # Creando edit user profile
-"""
 @login_required
 def edit_user_profile(request):
     if request.method == 'POST':
@@ -69,4 +68,5 @@ def edit_user_profile(request):
         form = UserChangeForm()
         return render(request, 'users/register.html', {'form': form})
     
+
 """

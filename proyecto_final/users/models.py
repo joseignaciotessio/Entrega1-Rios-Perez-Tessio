@@ -9,3 +9,8 @@ class User_profile(models.Model):
 
     def __str__(self):
         return self.user.username + ' - profile'
+
+
+
+
+  
