@@ -10,7 +10,7 @@ from nutrisur.forms import Presentations_upload_form
 from nutrisur.models import Sale
 from nutrisur.models import About
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.admin.views.decorators import staff_member_required
 
 def products(request):
     consulta = Healthdrink.objects.all()
@@ -46,7 +46,7 @@ def about(request):
     context = {'About': consulta}
     return render(request, "about.html", context=context) 
 
-@login_required
+@staff_member_required
 def create_products(request):
     print(request.POST)
 
@@ -61,7 +61,6 @@ def create_products(request):
                 country=form.cleaned_data['country'],
                 image = form.cleaned_data['image']
             )
-            return redirect(products)
 
     elif request.method == 'GET':
         form = Products_upload_form
@@ -136,18 +135,20 @@ def delete_product(request, pk):
  
 @login_required   
 def update_product(request, pk):
-    if request.method == 'POST':
-        form = Products_upload_form(request.POST)
-        if form.is_valid():
-            product = Healthdrink.objects.get(id=pk)
-            product.name = form.cleaned_data['name']
-            product.price = form.cleaned_data['price']
-            product.description = form.cleaned_data['description']
-            product.country = form.cleaned_data['country']
-            product.image = form.cleaned_data['image']
-            product.save()
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = Products_upload_form(request.POST)
 
-            return redirect(list_products)
+            if form.is_valid():
+                product = Healthdrink.objects.get(id=pk)
+                product.name = form.cleaned_data['name']
+                product.price = form.cleaned_data['price']
+                product.description = form.cleaned_data['description']
+                product.country = form.cleaned_data['country']
+                product.image = form.cleaned_data['image']
+                product.save()
+
+            
 
 
     elif request.method == 'GET':
