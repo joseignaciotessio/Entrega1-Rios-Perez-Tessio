@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Listado de Productos
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% for obj in object_list %}
+<div class="card" style="width: 18rem;">
+    {% if obj.image %}
+    <img src="{{obj.image.url}}" class="card-img-top">
+    {% else %}
+    <img src="https://img.freepik.com/vector-premium/etiqueta-sello-verde-100-ciento-natural-productos-aditivos-ni-conservantes_101884-1703.jpg" class="card-img-top">
+    {% endif %}
+    <div class="card-body">
+        <h5 class="card-title">{{obj.name}}</h5>
+        <p class="card-text">Nombre: {{obj.name}}</p>
+        <p class="card-text">Descripcion: {{obj.description}}</p>
+        <p class="card-text">Precio: {{obj.price}}</p>
+        <p class="card-text">Pais: {{obj.country}}</p>
+        <a href="/update_product/{{product.id}}/" class="btn btn-primary">Editar</a>
+        <a href="/delete_product/{{product.id}}/" class="btn btn-danger">Borrar</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
