@@ -1,16 +1,20 @@
-#from re import search
+
 
 from django.shortcuts import redirect, render
 from nutrisur.models import Healthdrink
 from nutrisur.models import Category
 from nutrisur.models import Container
-from nutrisur.forms import Products_upload_form
-from nutrisur.forms import Categories_upload_form
-from nutrisur.forms import Presentations_upload_form
+
 from nutrisur.models import Sale
 from nutrisur.models import About
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
+from django.views.generic import ListView, CreateView
+
+
+
+
+
 
 def products(request):
     consulta = Healthdrink.objects.all()
@@ -46,64 +50,6 @@ def about(request):
     context = {'About': consulta}
     return render(request, "about.html", context=context) 
 
-@staff_member_required
-def create_products(request):
-    print(request.POST)
-
-    if request.method == 'POST':
-        form = Products_upload_form(request.POST, request.FILES)
-
-        if form.is_valid():
-            Healthdrink.objects.create(
-                name=form.cleaned_data['name'],
-                description=form.cleaned_data['description'],
-                price=form.cleaned_data['price'],
-                country=form.cleaned_data['country'],
-                image = form.cleaned_data['image']
-            )
-
-    elif request.method == 'GET':
-        form = Products_upload_form
-        context = {'form': form}
-        return render(request, 'products_load.html', context=context)
-
-@login_required
-def create_categories(request):
-    print(request.POST)
-
-    if request.method == 'POST':
-        form = Categories_upload_form(request.POST)
-
-        if form.is_valid():
-            Category.objects.create(
-                categoria=form.cleaned_data['categoria'],
-                description=form.cleaned_data['description'],
-            )
-            return redirect(categories)
-
-    elif request.method == 'GET':
-        form = Categories_upload_form
-        context = {'form': form}
-        return render(request, 'search_any_products.html', context=context)
-
-@login_required
-def create_presentations(request):
-    print(request.POST)
-
-    if request.method == 'POST':
-        form = Presentations_upload_form(request.POST)
-
-        if form.is_valid():
-            Container.objects.create(
-                tipo=form.cleaned_data['tipo'],
-                volumen=form.cleaned_data['volumen'],
-            )
-            return redirect(containers)
-
-    elif request.method == 'GET':
-        form = Presentations_upload_form
-        context = {'form': form}
-        return render(request, 'presentations_load.html', context=context)
 
 @login_required
 def sale(request):
@@ -111,51 +57,16 @@ def sale(request):
     context = {'Sale': consulta}
     return render(request, "sale.html", context=context) 
 
-
-@login_required
-def list_products(request):
-    if request.user.is_authenticated:
-            products = Healthdrink.objects.all()
-            context = {'products':products}
-            return render(request, 'products_list.html', context=context)
-
-    return redirect('login')
+class List_products(ListView):
+    model = Healthdrink
+    template = 'list_products.html'
 
 
-@login_required
-def delete_product(request, pk):
-    if request.method == 'GET':
-        product = Healthdrink.objects.get(pk=pk)
-        context = {'product':product}
-        return render(request, 'delete_product.html', context=context)
-    elif request.method == 'POST':
-        product = Healthdrink.objects.get(pk=pk)
-        product.delete()
-        return redirect(products)
- 
-@login_required   
-def update_product(request, pk):
-    if request.user.is_superuser:
-        if request.method == 'POST':
-            form = Products_upload_form(request.POST)
+	
+#nutrisur/healthdrink_list.html
 
-            if form.is_valid():
-                product = Healthdrink.objects.get(id=pk)
-                product.name = form.cleaned_data['name']
-                product.price = form.cleaned_data['price']
-                product.description = form.cleaned_data['description']
-                product.country = form.cleaned_data['country']
-                product.image = form.cleaned_data['image']
-                product.save()
-
-            
-
-
-    elif request.method == 'GET':
-        product = Healthdrink.objects.get(id=pk)
-        form = Products_upload_form(initial={'name':product.name,'price':product.price,'description':product.description,'country':product.country,'image':product.image})
-        context = {'form':form}
-        return render(request, 'update_product.html', context=context)
-
-
-
+class Create_product(CreateView):  
+    model = Healthdrink
+    template_name = 'create_article.html'
+    fields = '__all__'
+    #success_url = '/articles/list-articles/'"""
