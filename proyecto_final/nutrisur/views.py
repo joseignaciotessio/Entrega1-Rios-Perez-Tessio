@@ -137,7 +137,7 @@ def delete_product(request, pk):
 @login_required   
 def update_product(request, pk):
     if request.method == 'POST':
-        form = Products_upload_form(request.POST)
+        form = Products_upload_form(request.POST, request.FILES)
         if form.is_valid():
             product = Healthdrink.objects.get(id=pk)
             product.name = form.cleaned_data['name']
