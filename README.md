@@ -14,7 +14,8 @@
 
 Link Video demostracion YouTube
 
-https://youtu.be/H_gKzSoDcPA
+https://youtu.be/H_gKzSoDcPA :yt:
+
 
 ## Forma de trabajo 💼
 
@@ -45,7 +46,7 @@ Desarrollar una WEB Django con patrón MVT como parte de la *"ENTREGA INTERMEDIA
 
 Nuestro proyecto contempla el despliegue de una página web de un emprendimiento de Bebidas Saludables Nutrisur :registered: (con actividad en Chile)
 
-En esta entrega intermedia nuestro proyecto incluye:
+Nuestro proyecto incluye:
 
 1- Herencia de Html.
 
@@ -58,9 +59,9 @@ En esta entrega intermedia nuestro proyecto incluye:
 3- Contiene un formulario para insertar datos en cada una de las clases
 anteriormente señaladas.
 
-4- Permite la busqueda de productos en la base de datos ingresando algún valor de referencia
-   
- 
+4- Permite la busqueda de productos en la base de datos ingresando algún valor de referencia, registro de usuarios, editar, agregar y borrar productos como admin.
+
+
 [Subir](#top)
  
 <a name="item2"></a>
@@ -129,8 +130,8 @@ pip        22.1.2
 setuptools 63.1.0
 sqlparse   0.4.2
 wheel      0.37.1
-```
 
+``` 
 
 ⚠️ 🆘 En caso que django no esté instalado ejecutar el siguiente
 código para su instalación:
@@ -142,7 +143,12 @@ pip install django
 ```
 python3 manage.py runserver
 ```
+ ‼️ Otros pre-requisitos: Pillow, Django-crispy-forms
  
+ ```
+ django-crispy-forms 1.14.0
+ Pillow              9.2.0
+ ```
  
 [Subir](#top)
  
