@@ -10,6 +10,7 @@ from nutrisur.forms import Presentations_upload_form
 from nutrisur.models import Sale
 from nutrisur.models import About
 from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 
 
 def products(request):
@@ -46,7 +47,7 @@ def about(request):
     context = {'About': consulta}
     return render(request, "about.html", context=context) 
 
-@login_required
+@staff_member_required
 def create_products(request):
     print(request.POST)
 
@@ -68,7 +69,7 @@ def create_products(request):
         context = {'form': form}
         return render(request, 'products_load.html', context=context)
 
-@login_required
+@staff_member_required
 def create_categories(request):
     print(request.POST)
 
@@ -87,7 +88,7 @@ def create_categories(request):
         context = {'form': form}
         return render(request, 'search_any_products.html', context=context)
 
-@login_required
+@staff_member_required
 def create_presentations(request):
     print(request.POST)
 
@@ -113,7 +114,7 @@ def sale(request):
     return render(request, "sale.html", context=context) 
 
 
-@login_required
+@staff_member_required
 def list_products(request):
     if request.user.is_authenticated:
             products = Healthdrink.objects.all()
@@ -123,7 +124,7 @@ def list_products(request):
     return redirect('login')
 
 
-@login_required
+@staff_member_required
 def delete_product(request, pk):
     if request.method == 'GET':
         product = Healthdrink.objects.get(pk=pk)
@@ -134,7 +135,7 @@ def delete_product(request, pk):
         product.delete()
         return redirect(products)
  
-@login_required   
+@staff_member_required 
 def update_product(request, pk):
     if request.method == 'POST':
         form = Products_upload_form(request.POST, request.FILES)
