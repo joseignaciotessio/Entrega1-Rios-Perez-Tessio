@@ -14,7 +14,7 @@
 
 Link Video demostracion YouTube
 
-https://youtu.be/H_gKzSoDcPA :yt:
+https://youtu.be/H_gKzSoDcPA 🔗
 
 
 ## Forma de trabajo 💼
